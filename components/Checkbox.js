@@ -7,17 +7,15 @@ const StyledCheckbox = styled.input.attrs({ type: "checkbox" })`
   border: 1px solid #ccc;
   border-radius: 3px;
   cursor: pointer;
-
- 
 `;
 
 const Checkbox = ({ checked, readOnly, ...props }) => (
-    <StyledCheckbox
-        type="checkbox"
-        checked={checked}
-        disabled={readOnly}
-        {...props}
-    />
+  <StyledCheckbox
+    type="checkbox"
+    checked={checked}
+    disabled={readOnly}
+    {...props}
+  />
 );
 
 export default Checkbox;

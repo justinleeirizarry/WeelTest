@@ -9,12 +9,18 @@ const PageContainer = styled.div`
   max-width: 1200px;
   padding: 24px;
   margin: 0 auto;
+  dipslay: grid;
+  place-items: center;
 `;
 
 const Title = styled.h1`
   font-family: sans-serif;
-  font-size: 55px;
+  font-size: 6rem;
+  font-weight: 800;
   text-align: center;
+  color: #333;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 `;
 
 const App = ({ categories, transactions }) => {
@@ -69,10 +75,7 @@ const App = ({ categories, transactions }) => {
     return (
         <PageContainer>
             <Title>Transactions</Title>
-            <SearchBar
-                value={searchTerm}
-                onChange={handleSearchChange}
-            />
+            <SearchBar value={searchTerm} onChange={handleSearchChange} />
             <TransactionTable
                 transactions={filteredTransactions}
                 onCategoryChange={handleCategoryChange}

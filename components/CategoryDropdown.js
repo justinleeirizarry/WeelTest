@@ -1,12 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const CategoryDropdown = ({ categories, selectedCategory, onCategoryChange }) => (
+const CategoryDropdown = ({
+    categories,
+    selectedCategory,
+    onCategoryChange,
+}) => (
     <select
         value={selectedCategory}
         onChange={onCategoryChange}
-        style={{ padding: '5px' }}
+        style={{ padding: "5px" }}
     >
-        {categories.map(category => (
+        {categories.map((category) => (
             <option key={category.id} value={category.id}>
                 {category.name}
             </option>
