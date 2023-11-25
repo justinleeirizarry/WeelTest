@@ -23,7 +23,7 @@ const SearchBar = ({ value, onChange }) => (
     type="text"
     value={value}
     onChange={onChange}
-    placeholder="Search transactions..."
+    placeholder="Search..."
   />
 );
 

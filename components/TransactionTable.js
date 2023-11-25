@@ -44,12 +44,6 @@ const StyledTable = styled.table`
     background-color: #bee3f8;
   }
 
-  @media (min-width: 640px) {
-    th,
-    td {
-      padding: 1.25rem;
-    }
-  }
 `;
 
 const TransactionTable = ({

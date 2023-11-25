@@ -6,25 +6,30 @@ import useDataLookup from "./hooks/useDataLookup";
 import SearchBar from "./components/SearchBar";
 
 const PageContainer = styled.div`
-  max-width: 1200px;
-  padding: 24px;
-  margin: 0 auto;
-  dipslay: grid;
-  place-items: center;
+    max-width: 1200px;
+    padding: 24px;
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
 `;
 
 const Title = styled.h1`
   font-family: sans-serif;
-  font-size: 6rem;
+  font-size: 7vw;
   font-weight: 800;
   text-align: center;
   color: #333;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin: 1rem;
 `;
 
 const App = ({ categories, transactions }) => {
     const { getMerchantName, getCategoryName } = useDataLookup();
+
     const [searchTerm, setSearchTerm] = useState("");
     const debouncedSearchTerm = useDebounce(searchTerm, 300);
     const [transactionData, setTransactionData] = useState(transactions);
